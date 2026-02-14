@@ -97,8 +97,8 @@ function welcomeTemplate({studentName, studentId, studentEmail}) {
   // user.email,
   // user.full_name,
   // reset_link
-  function passwordResetTemplate({name, resetToken}) {
-    const resetLink = `https://www.edvantage.org.in/reset-password?token=${resetToken}`;
+  function passwordResetTemplate({name, reset_token}) {
+    const resetLink = `https://www.edvantage.org.in/reset-password?token=${reset_token}`;
     return `
   <!DOCTYPE html>
   <html>
