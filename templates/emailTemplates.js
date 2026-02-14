@@ -57,7 +57,7 @@ function welcomeTemplate({studentName, studentId, studentEmail}) {
   /**
    * Course enrollment confirmation email
    */
-  function enrollmentTemplate(studentName, courseName, enrollmentId) {
+  function enrollmentTemplate({studentName, courseName, enrollmentId}) {
     return `
   <!DOCTYPE html>
   <html>
@@ -94,7 +94,10 @@ function welcomeTemplate({studentName, studentId, studentEmail}) {
   /**
    * Password reset email
    */
-  function passwordResetTemplate(name, resetToken) {
+  // user.email,
+  // user.full_name,
+  // reset_link
+  function passwordResetTemplate({name, resetToken}) {
     const resetLink = `https://www.edvantage.org.in/reset-password?token=${resetToken}`;
     return `
   <!DOCTYPE html>
